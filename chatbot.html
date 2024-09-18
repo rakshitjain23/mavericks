@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chatbot</title>
+  <link rel="stylesheet" href="chatbot.css">
+</head>
+<body>
+  <div class="chatbot-container">
+    <h2>Welcome to MedWebb's AI Chatbot</h2>
+    <p>Type the name of a medicine or upload an image to get more information.</p>
+    
+    <div class="chatbot-input">
+      <input type="text" placeholder="Type a medicine name here..." id="medicineInput">
+      <button onclick="getMedicineInfo()">Submit</button>
+    </div>
+
+    <div class="chatbot-image-upload">
+      <label for="uploadImage">Upload a photo of the medicine:</label>
+      <input type="file" id="uploadImage">
+    </div>
+
+    <div class="chatbot-response">
+      <p id="medicineInfo"></p>
+    </div>
+  </div>
+
+  <script>
+    function getMedicineInfo() {
+      const medicineName = document.getElementById('medicineInput').value;
+      document.getElementById('medicineInfo').innerHTML = `You searched for: ${medicineName}`;
+      // Here you can add the logic to show the medicine info, as this is just a prototype.
+    }
+  </script>
+</body>
+</html>
